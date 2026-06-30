@@ -3,13 +3,9 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
 require("dotenv").config();
-<<<<<<< HEAD
+
 const issueRoutes = require("./routes/IssueRoutes");
-=======
 
-const issueRoutes = require("./routes/IssueRoutes")
-
->>>>>>> becaecbf17721418a75e5d4006d4492f17ca3411
 const app = express();
 
 app.use(cors());
