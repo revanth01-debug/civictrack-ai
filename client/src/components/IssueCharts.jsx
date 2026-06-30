@@ -11,7 +11,7 @@ function IssueCharts() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/issues")
+    fetch("https://civictrack-ai-3.onrender.com/api/issues")
       .then((res) => res.json())
       .then((issues) => {
         const pending = issues.filter(

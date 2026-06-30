@@ -18,7 +18,7 @@ const [issues, setIssues] = useState([]);
 const [topIssue, setTopIssue] = useState("");
 const [notifications, setNotifications] = useState(0);
   const fetchStats = () => {
-    fetch("http://localhost:5000/api/issues")
+    fetch("https://civictrack-ai-3.onrender.com/api/issues")
       .then((res) => res.json())
       .then((data) => {
         setNotifications(

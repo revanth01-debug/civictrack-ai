@@ -13,7 +13,7 @@ const deleteIssue = async (id) => {
   if (!confirmDelete) return;
 
   try {
-    await fetch(`http://localhost:5000/api/issues/${id}`, {
+    await fetch(`https://civictrack-ai-3.onrender.com/api/issues/${id}`, {
       method: "DELETE",
     });
 
@@ -30,7 +30,7 @@ const deleteIssue = async (id) => {
 const updateStatus = async (id, status) => {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/issues/${id}/status`,
+      `https://civictrack-ai-3.onrender.com/api/issues/${id}/status`,
       {
         method: "PUT",
         headers: {
@@ -57,7 +57,7 @@ const updateStatus = async (id, status) => {
   }
 };
 const fetchIssues = () => {
-  fetch("http://localhost:5000/api/issues")
+  fetch("https://civictrack-ai-3.onrender.com/api/issues")
     .then((res) => res.json())
     .then((data) => {
       setIssues(data.slice(0, 5));
@@ -207,7 +207,7 @@ useEffect(() => {
 ><td style={{ padding: "15px" }}>
   {issue.image ? (
     <img
-      src={`http://localhost:5000/uploads/${issue.image}`}
+      src={`https://civictrack-ai-3.onrender.com/uploads/${issue.image}`}
       alt="Issue"
       style={{
         width: "80px",
@@ -384,7 +384,7 @@ useEffect(() => {
       {selectedIssue.image && (
   <div style={{ margin: "15px 0" }}>
     <img
-      src={`http://localhost:5000/uploads/${selectedIssue.image}`}
+      src={`https://civictrack-ai-3.onrender.com/uploads/${selectedIssue.image}`}
       alt="Issue"
       style={{
         width: "100%",

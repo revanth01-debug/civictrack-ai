@@ -166,7 +166,7 @@ if (image) {
 }
 
 const response = await fetch(
-  "http://localhost:5000/api/issues",
+  "https://civictrack-ai-3.onrender.com/api/issues",
   {
     method: "POST",
     body: formData,

@@ -35,7 +35,7 @@ const [searchText, setSearchText] =
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/issues")
+    fetch("https://civictrack-ai-3.onrender.com/api/issues")
       .then((res) => res.json())
      .then((data) => {
 

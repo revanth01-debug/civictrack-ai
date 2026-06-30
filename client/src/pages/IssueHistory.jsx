@@ -11,7 +11,7 @@ const [statusFilter, setStatusFilter] =
 
 const [search, setSearch] = useState("");
   const fetchIssues = () => {
-    fetch("http://localhost:5000/api/issues")
+    fetch("https://civictrack-ai-3.onrender.com/api/issues")
       .then((res) => res.json())
       .then((data) => {
   console.log(data);
@@ -26,7 +26,7 @@ const [search, setSearch] = useState("");
 
   const updateStatus = async (id, newStatus) => {
     try {
-      await fetch(`http://localhost:5000/api/issues/${id}`, 
+      await fetch(`https://civictrack-ai-3.onrender.com/api/issuess/${id}`, 
         {
         method: "PUT",
         headers: {
@@ -381,7 +381,7 @@ border: "1px solid #334155",
       {selectedIssue.image && (
   <div style={{ margin: "15px 0" }}>
     <img
-      src={`http://localhost:5000/uploads/${selectedIssue.image}`}
+      src={`https://civictrack-ai-3.onrender.com/uploads/${selectedIssue.image}`}
       alt="Issue"
       style={{
         width: "100%",
